@@ -13,15 +13,14 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse) #contains ggplot package
 ```
 
-# Relationship between GDP and CO2 emissions
-## Introduction
+# **Introduction**
 This report was prepared to the attention of the United Nations. It analyzes the relationship between a country's GDP, its life expectancy and CO2 emissions. Our goal is to determine to what degree a country’s economic strength or weakness may be related to its public health status and impact on climate pollution. We hypothesize that both life expectancy and CO2 emissions increase with a country's GDP.
 
 ```{r data, include=FALSE}
 gapminder_1997 <- read_csv("../data/gapminder_1997.csv")
 ```
 
-### Relationship between GDP and Life Expectancy
+## *Relationship between GDP and Life Expectancy*
 ```{r gdp_lifeExp_1997, echo=FALSE}
 ggplot(data = gapminder_1997) +
   aes(x = gdpPercap, y = lifeExp) +
